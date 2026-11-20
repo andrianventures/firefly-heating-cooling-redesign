@@ -6,9 +6,9 @@ Research snapshot: November 20, 2026. This is an independent redesign proposal, 
 
 - The WordPress sitemaps list 14 pages and 12 posts, with `/heating/` appearing in both; category and author archives add four more URLs. Some listed pages are empty WooCommerce routes or thin service posts. This redesign has 30 substantive HTML pages, not a recreated cart or empty account system.[1][2][3]
 - The published site describes Columbus/Central Ohio heating, AC repair, heating system installation, heat pumps, ductless systems, filters, air scrubbers, insulation, thermostats, routine maintenance, and residential/commercial work. It advertises 24-hour emergency assistance and free estimates; these are owner-site claims, not independently verified promises.[4][5][6]
-- The supplied Facebook profile identifies a Columbus Firefly Heating & Cooling page. Posts and current business details were not fully accessible without a signed-in session; this preview links to the supplied profile but does not copy Facebook endorsements.[8]
-- Address conflict: the user-supplied address and Maps listing show **1190 Gabrielle Elaine Dr, Columbus, OH 43228**; the current website says **1325 Waterford Pointe Cir, Columbus, OH 43228**. The preview deliberately gives only Columbus, OH 43228 until the owner confirms the public street address.[7][9]
-- In a limited unsigned Maps view, the Google profile displayed 4.9 stars but did not expose full review text or a reliable count.[9] The original website displays Michelle B. and Autumn L. testimonials; the latter are **not labelled Google reviews** on the new site.[4] Yahoo Local syndicated a Yelp snapshot of 3.5 stars across five reviews, including two one-star reviews. That feed must not be conflated with Google.[10]
+- The supplied Facebook profile was publicly accessible without signing in. Its public photo grid exposed several thumbnails and a recent blower-motor post, but a complete album and all post context were not accessible. Five distinct photos from the visible public material were downloaded locally and used on relevant pages. The supplied Facebook URL is linked in the site; no Facebook endorsement is fabricated.[8]
+- Address conflict: the user-supplied Google listing details give **1190 Gabrielle Elaine Dr, Columbus, OH 43228**; the current website and Facebook profile give **1325 Waterford Pointe Cir, Columbus, OH 43228**. The preview deliberately gives only Columbus, OH 43228 until the owner confirms the public street address.[7][8][9]
+- The user supplied **4.9/5 and 27 Google reviews**. A limited unsigned Maps view showed 4.9 stars but did not expose full review text or an independently reliable count.[9] The redesign displays the supplied figures with a caveat and links to the Google listing, but uses **no Google review quotations** or `aggregateRating` schema. Firefly’s original website separately displays Michelle B. and Autumn L. testimonials; those are expressly labelled company-site quotes.[4] Yahoo Local syndicated a Yelp snapshot of 3.5 stars across five reviews, including two one-star reviews; that feed is not Google.[10]
 
 ## Local intent mapping
 
@@ -46,22 +46,16 @@ The original location list includes the spellings “Powel” and “Ghana”; t
 
 ## Imagery and rights
 
-The About page includes the **original business wordmark** downloaded from the existing Firefly website: `https://fireflyheatingandcooling.com/wp-content/uploads/2024/08/Screenshot_39-removebg-preview.png`. Ask the owner to approve its continued use and supply a vector/hi-res original. It is not a verified logo license for third parties.[4]
+The redesign now assigns **31 distinct in-page assets to 31 visible placements** across 30 pages: eleven files sourced from Firefly’s existing website/Facebook (including its branded van, a blower-motor photo, a filter photo and relevant equipment graphics), and 20 topic-matched Unsplash photos. The social-share graphic derives from the business van but is not an extra in-page placement. The photo-by-photo URL and usage table is in [ASSETS.md](ASSETS.md). Do not describe every site-hosted image as a Firefly job: the original site’s AC service image looks like stock, and equipment diagrams are illustrative. Ask the owner to approve use of the original wordmark, business photos and quotations before an official launch. Unsplash permits commercial use under its published license.[4][8][11]
 
-Other photographs are locally stored from Unsplash, which permits commercial use without required attribution under its published license.[11] They are illustrative **stock images, not Firefly projects or technicians**:
-
-- `hero-home.jpg` — `https://images.unsplash.com/photo-1618221195710-dd6b41faaea6`
-- `home-comfort.jpg` — `https://images.unsplash.com/photo-1586023492125-27b2c045efd7`
-- `outdoor-ac.jpg` — `https://images.unsplash.com/photo-1700124113583-81aa99ea2aa2`
-- `heat-pump.jpg` — `https://images.unsplash.com/photo-1776860150305-108ed577d7d4`
-- `filter.jpg` (thermostat image) — `https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3`
+No generic living-room “comfort” photographs remain. Illustrative images show HVAC equipment, controls, filters, ductwork, installation or insulation; the air-scrubber page uses the original website’s airflow diagram rather than a portable room purifier. Each photo has a descriptive, provenance-aware alt attribute.
 
 ## Before owner approval / full launch
 
 1. Confirm the correct street address and service area; update footer, `HVACBusiness` schema and contact page together.
 2. Confirm emergency availability, exact services, whether AC installation and commercial service are actively offered, and any licenses/insurance before stating them as fact.
 3. Ask permission to use the existing wordmark and customer quotes, and substitute actual crew/project photographs if available.
-4. Confirm current Google reviews with direct access before adding a Google badge or a review aggregate; do not use self-serving `aggregateRating` schema.
+4. Confirm the current Google rating/count and review wording in the owner’s Google Business Profile before treating the supplied 4.9/27 figures as current; do not add self-serving `aggregateRating` schema.
 5. Replace the preview host in canonicals, Open Graph tags, JSON-LD and sitemap with the final domain using `FIREFLY_BASE`; only then remove preview `noindex`. Review the draft privacy wording with the owner.
 6. For autonomous form submissions, run the supplied Node server on a secure HTTPS host and set a strong `FIREFLY_ADMIN_PASSWORD`; GitHub Pages itself cannot run a server. Test the private inbox after deployment.
 

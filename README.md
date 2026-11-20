@@ -1,6 +1,6 @@
 # Firefly Heating & Cooling — independent website redesign preview
 
-30 generated static HTML pages, responsive CSS, small progressive-enhancement JavaScript, local images, descriptive metadata, JSON-LD `HVACBusiness`/`Service`/`WebPage`/FAQ markup, and a sitemap. The preview is **not** affiliated with or approved by the business yet. See [RESEARCH.md](RESEARCH.md) for source notes, address conflict and 25 local search targets.
+30 generated static HTML pages, responsive CSS, small progressive-enhancement JavaScript, **31 distinct in-page HVAC-related images**, descriptive metadata, JSON-LD `HVACBusiness`/`Service`/`WebPage`/FAQ markup, and a sitemap. Five photos come from Firefly’s publicly visible Facebook material, six assets from its original website, and the remaining illustrations/photos are distinct relevant stock. The preview is **not** affiliated with or approved by the business yet. See [RESEARCH.md](RESEARCH.md) for source notes and address/review caveats; see [ASSETS.md](ASSETS.md) for per-image provenance.
 
 ## Put the preview on GitHub Pages (short version)
 
@@ -37,7 +37,7 @@ FIREFLY_ADMIN_PASSWORD='local-test-secret-only-123456' PORT=8080 node server.mjs
 ## Owner approval checklist
 
 - Confirm public street address: user/Maps supply 1190 Gabrielle Elaine Dr, while the current website displays 1325 Waterford Pointe Cir. The preview does not publish either street address.
-- Confirm exact service offerings, 24-hour availability and free-estimate terms; do not invent license, guarantee, price or Google review count.
-- Approve use of the existing original wordmark and customer testimonials; replace illustrative Unsplash photos with actual crew/project images if supplied.
+- Confirm exact service offerings, 24-hour availability and free-estimate terms; verify the supplied 4.9/5 and 27 Google-review figures against the live listing. No individual Google review text was accessible for this preview.
+- Approve use of original business wordmark, website/Facebook images and customer testimonials; substitute owner-supplied originals or additional crew/project photos when available.
 - Review draft privacy wording and decide on data retention before enabling the inbox for real customers.
 - When transferring to the original business domain, plan 301 redirects for old service slugs and remove obsolete WooCommerce URLs safely, then submit the final sitemap.
