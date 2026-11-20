@@ -6,7 +6,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 
-const root = path.join(path.dirname(fileURLToPath(import.meta.url)), 'site');
+const root = path.join(path.dirname(fileURLToPath(import.meta.url)), 'docs');
 const dataDir = process.env.FIREFLY_DATA_DIR || path.resolve(root, '..', 'firefly-private');
 const password = process.env.FIREFLY_ADMIN_PASSWORD;
 if (!password || password.length < 16) {

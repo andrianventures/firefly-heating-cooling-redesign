@@ -5,7 +5,7 @@
 ## Put the preview on GitHub Pages (short version)
 
 1. Open the repo **Settings → Pages**.
-2. Under **Build and deployment → Source**, choose **GitHub Actions**. The included workflow publishes `site/` on every push to `main`; use **Actions → Deploy static preview → Run workflow** if it has not run yet.
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**; set **main /docs** and Save. The preview is generated in `docs/` and needs no workflow permissions.
 3. Once the deployment succeeds, visit `https://andrianventures.github.io/firefly-heating-cooling-redesign/`.
 
 GitHub Pages is public and **cannot run a form backend**. This preview intentionally uses `noindex,nofollow` to avoid competing with Firefly's existing domain.
@@ -14,10 +14,10 @@ GitHub Pages is public and **cannot run a form backend**. This preview intention
 
 On GitHub Pages, the contact form validates fields and opens a prepared **SMS draft** addressed to (614) 363-9941; the visitor **must press Send in their messaging app**. A Copy button is included when the device cannot open SMS. The website does **not** itself deliver a message in this mode. Do not claim otherwise in a sales demo.
 
-For automatic, first-party submission without a third-party form service, deploy the same `site/` directory together with `server.mjs` to a **Node.js-capable HTTPS host**:
+For automatic, first-party submission without a third-party form service, deploy the same `docs/` directory together with `server.mjs` to a **Node.js-capable HTTPS host**:
 
 ```bash
-FIREFLY_BASE=https://your-final-domain.example/ python3 site/build.py
+FIREFLY_BASE=https://your-final-domain.example/ python3 docs/build.py
 FIREFLY_ADMIN_PASSWORD='a-unique-secret-at-least-16-characters' FIREFLY_DATA_DIR=/private/writable/firefly PORT=8080 HOST=127.0.0.1 node server.mjs
 ```
 
@@ -28,11 +28,11 @@ Use a persistent writable private directory **outside the public web root**, set
 ### Development
 
 ```bash
-FIREFLY_BASE=http://127.0.0.1:8080/ python3 site/build.py
+FIREFLY_BASE=http://127.0.0.1:8080/ python3 docs/build.py
 FIREFLY_ADMIN_PASSWORD='local-test-secret-only-123456' PORT=8080 node server.mjs
 ```
 
-`site/build.py` is the editable source for page text and metadata. Commit the regenerated `site/` pages after changes. Main HTML/CSS/JS remains static and can be hosted on any static host; the optional server only handles delivery and the inbox.
+`docs/build.py` is the editable source for page text and metadata. Commit the regenerated `docs/` pages after changes. Main HTML/CSS/JS remains static and can be hosted on any static host; the optional server only handles delivery and the inbox.
 
 ## Owner approval checklist
 
