@@ -64,6 +64,7 @@ async function submit(req,res) {
 }
 const server=http.createServer((req,res)=>{
   const pathname=new URL(req.url,'http://localhost').pathname;
+  if (pathname==='/api/form-status') return req.method==='GET'?reply(res,200,JSON.stringify({firstParty:true}),'application/json; charset=utf-8',{'Cache-Control':'no-store'}):reply(res,405,'Method not allowed.');
   if (pathname==='/api/enquiries') return req.method==='POST'?submit(req,res):reply(res,405,'Method not allowed.');
   if (pathname==='/owner/inbox') return req.method==='GET'?inbox(req,res):reply(res,405,'Method not allowed.');
   if (!['GET','HEAD'].includes(req.method)) return reply(res,405,'Method not allowed.');

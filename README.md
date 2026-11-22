@@ -2,6 +2,8 @@
 
 30 generated static HTML pages, responsive CSS, small progressive-enhancement JavaScript, **31 distinct in-page HVAC-related images**, descriptive metadata, JSON-LD `HVACBusiness`/`Service`/`WebPage`/FAQ markup, and a sitemap. Five photos come from Firefly’s publicly visible Facebook material, six assets from its original website, and the remaining illustrations/photos are distinct relevant stock. The preview is **not** affiliated with or approved by the business yet. See [RESEARCH.md](RESEARCH.md) for source notes and address/review caveats; see [ASSETS.md](ASSETS.md) for per-image provenance.
 
+The trade-site refresh uses a full-width split hero, a larger sticky header with an always-visible tap-to-call control, bigger call/request actions, and a brighter HVAC-blue/orange palette. It adopts conversion patterns from the supplied examples without copying their brand or adding unverified licensing, pricing, financing, warranty, or response-time claims. The hero's 4.9/5 and 27-review figures are **user-supplied, not independently verified** and labelled accordingly on the page.
+
 ## Put the preview on GitHub Pages (short version)
 
 1. Open the repo **Settings → Pages**.
@@ -12,7 +14,7 @@ GitHub Pages is public and **cannot run a form backend**. This preview intention
 
 ### Form behavior
 
-On GitHub Pages, the contact form validates fields and opens a prepared **SMS draft** addressed to (614) 363-9941; the visitor **must press Send in their messaging app**. A Copy button is included when the device cannot open SMS. The website does **not** itself deliver a message in this mode. Do not claim otherwise in a sales demo.
+On GitHub Pages or any other static host, the contact form validates fields and opens a prepared **SMS draft** addressed to (614) 363-9941; the visitor **must press Send in their messaging app**. A Copy button is included when the device cannot open SMS. The website does **not** itself deliver a message in this mode. Do not claim otherwise in a sales demo. The form only switches to automatic delivery when it detects the included first-party Node server at `/api/form-status`.
 
 For automatic, first-party submission without a third-party form service, deploy the same `docs/` directory together with `server.mjs` to a **Node.js-capable HTTPS host**:
 
